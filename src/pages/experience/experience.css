@@ -1,0 +1,98 @@
+.experience{
+    display: flex;
+    width: 100%;
+    gap:40px;
+    flex-direction: column;
+}
+.experience h2{
+    text-align: center;
+}
+.exp-text h2{
+    font-weight: 200;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.exp-text p{
+    font-weight: 200;
+    text-align: left;
+}
+
+.exp-text{
+    flex: 2;
+}
+.exp-text p {
+color: rgb(221, 220, 220);
+line-height: 30px;
+}
+.exp-blob{
+    flex: 1;
+    display: flex;
+    gap: 50px;
+}
+.exp-blob ul{
+    list-style: none;
+}
+.exp-icon{
+    filter:grayscale(80%)
+}
+
+.exp-icon:hover{
+    filter:grayscale(0%)
+}
+.tag-list{
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+}
+.tag-list li{
+    padding: 1rem;
+    background-color: transparent;
+    
+}
+.scroller{
+    max-width: 600px;
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent,white 20%, white 80%, transparent);
+    mask: linear-gradient( 90deg, transparent,white 20%, white 80%, transparent);
+}
+.scroller_inner{
+    display: flex;
+    gap:1rem;
+    padding-block: 1rem;
+}
+.scroller .scroller_inner{
+    flex-wrap: nowrap;
+    animation: scroll 40s linear infinite;
+    width:max-content;
+}
+@keyframes scroll {
+    to{
+        transform: translateX(calc(-50% - 0.5rem));
+    }
+}
+.blob-title{
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-bottom: 40px;
+}
+.others ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 30px;
+    width: 100%;
+}
+@media screen and (max-width:992px) {
+    .scroller_inner{
+        flex-wrap: wrap;
+    }
+    .exp-blob{
+        flex-direction: column;
+    }
+    .exp-text p{
+        text-align: center;
+    }
+
+}

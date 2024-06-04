@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
+  padding:50px 50px;
   min-height: 100vh;
+  min-height: 100dvh;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
+  url('https://images.unsplash.com/photo-1617150119111-09bbb85178b0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNsb3Vkc3xlbnwwfHwwfHx8MA%3D%3D');
+background-size: 100%;
+animation: background-move 5s ease-in-out infinite; 
+}
+.app-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes background-move {
+  0% {
+    background-size: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  20% { /* Start size increase later */
+    background-size: 109.5%;  /* Smaller increment for subtle change */
   }
+  40% { 
+    background-size: 111%;
+  }
+  60% {
+    background-size: 115.5%;
+  }
+  80% {
+    background-size: 109%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+@media  screen and (max-width: 768px) {
+    .App{
+      padding: 60px 30px;
+    }
 }

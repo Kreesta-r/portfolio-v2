@@ -1,0 +1,61 @@
+.header {
+    display: flex;
+    justify-content: flex-end;
+    height: 60px;
+    padding: 0 50px 0; /* Removed the bottom padding to avoid extra space */
+    color: rgb(163, 163, 163);
+    align-items: center;
+    font-size: 20px;
+    gap: 20px;
+}
+
+.header > .icons:hover {
+    color: white;
+}
+
+.responsive {
+    display: none;
+    cursor: pointer; /* Added cursor pointer for better UX */
+}
+
+.responsive-nav {
+    position: fixed; /* Added position fixed for better UX */
+    margin-top: 60px; /* Adjusted margin to align with header */
+    display: none; /* Initially hide responsive nav */
+    flex-direction: column;
+    z-index: 1;
+    background-color: #333; /* Added background color */
+    padding: 10px; /* Added padding for better spacing */
+}
+
+.responsive-nav a {
+    color: #fff; /* Added text color for links */
+    text-decoration: none; /* Removed default underline */
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        justify-content: space-between;
+        padding-right: 20px; /* Adjusted right padding for responsiveness */
+    }
+
+    .responsive {
+        display: block;
+    }
+  
+    .responsive-nav {
+        margin-top: 350px;
+        margin-left: 0;
+        padding-left: 0;
+        display: flex; /* Display the responsive nav */
+        flex-direction: column;
+        width:100vw;
+        justify-content: space-around;
+        gap:40px;
+        align-items: center;
+        z-index: 1;
+        background-color: #333; /* Added background color */
+        padding: 10px; /* Added padding for better spacing */
+    }
+}

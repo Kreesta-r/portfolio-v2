@@ -1,0 +1,29 @@
+.navbar{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    position: sticky;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+.link-active{
+    color: white;
+    transform: scale(1.06);
+}
+.nav-link{
+    transition: 0.6s ease;
+    color: rgb(145, 143, 143);
+}
+.nav-link:hover{
+    transform: translateX(20px);
+    color: white !important;
+}
+@media screen and (max-width: 992px) {
+    .navbar{
+        display: none;
+    }
+}

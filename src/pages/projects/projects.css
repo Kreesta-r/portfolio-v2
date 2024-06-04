@@ -1,0 +1,37 @@
+.projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  min-height: 100px;
+}
+.top h2{
+  font-weight: 200;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+.top p{
+  text-align: center;
+  font-weight: 150;
+  font-size: 1rem;
+}
+.item {
+  animation: slide-left-to-right 10s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes slide-left-to-right {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+/* New styles for hover/click interaction */
+.projects:hover .item,
+.projects .item:hover,
+.projects .item:active {
+  animation-play-state: paused; /* Pause animation on hover/click */
+}

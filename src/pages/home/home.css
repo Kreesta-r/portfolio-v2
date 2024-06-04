@@ -1,0 +1,28 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+.intro h1{
+    font-size: 6rem;
+}
+
+.intro-text p{
+    font-size: 1rem;
+    line-height: 30px;
+    color:rgb(179, 179, 179);
+    text-align: justify;
+}
+
+@media screen and (min-width: 641px) and (max-width:992px){
+    .intro h1{
+        font-size: 4rem;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 640px){
+    .intro h1{
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+}

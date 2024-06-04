@@ -1,0 +1,40 @@
+.navbar{
+    /* flex:1;
+    display: flex;
+    padding: 50px;
+    gap:30%; */
+    gap:30%;
+    display: flex;
+    padding:50px;
+    flex-direction: column;
+    width: 10vw;
+    height: 100vh; /* Set navbar height to full viewport height */
+    position: fixed; /* Make navbar fixed */
+    top: 0; /* Position navbar at the top */
+    left: 0; /* Position navbar at the left */
+    z-index: 1; /* Ensure navbar appears above other content */
+    overflow-y: auto; /* Enable vertical scrolling for the navbar */
+  }
+  .links{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+  }
+ 
+  .links a {
+    transition: transform 0.3s ease; 
+  }
+  .link-active {
+    color: red;
+    transform: translateX(0); /* Initial position */
+  /* Transition with ease effect over 0.3 seconds */
+  }
+  
+  .links a:hover {
+    transform: translateX(6px); /* Apply transformation on hover */
+  }
+  @media screen and (max-width: 1000px) {
+    .navbar{
+        display: none;
+    }
+}
