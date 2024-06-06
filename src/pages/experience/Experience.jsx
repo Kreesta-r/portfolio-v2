@@ -1,10 +1,10 @@
 import React from 'react'
 import './experience.css'
-import { javascript, python, css, html, nodejs, git, vue, tailwind, mongodb,flutter, postgre,django, php, figma} from './icons.js'
+import { javascript, python, css, html, nodejs, git, vue, tailwind,github,sass, mongodb,flutter, postgre,django, php, figma} from './icons.js'
 
 export default function Experience() {
   return (
-    <div className='experience'>
+    <div className='experience' data-aos="fade-in">
       <div className="exp-text">
           <h2>Experience</h2>
           <p>The world of web development is a constant evolution, and I've been thrilled to be a part of it for the past 3 years. Ever since I began my journey in this dynamic field, I've been captivated by its potential to create innovative solutions, connect people across the globe, and push the boundaries of what's possible online. This passion for exploration and learning has fueled my dedication to mastering the ever-changing landscape of web development.</p>
@@ -53,6 +53,8 @@ export default function Experience() {
             <li className='exp-icon'>{php}</li>
             <li className='exp-icon'>{figma}</li>
             <li className='exp-icon'>{flutter}</li>
+            <li className="exp-icon">{github}</li>
+            <li className="exp-icon">{sass}</li>
           </ul>
         </div>
       </div>

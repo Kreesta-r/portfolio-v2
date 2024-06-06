@@ -6,9 +6,15 @@ import Experience from './pages/experience/Experience'
 import Contact from './pages/contact/Contact.jsx'
 import Projects from './pages/projects/Projects'
 import Navbar from './Navbar.jsx';
+import CreateProject from './pages/createproject/CreateProject.jsx';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function App() {
+  AOS.init({
+    duration: 3000,
+  });
   return (
     <div className="App">
     
@@ -20,6 +26,7 @@ function App() {
         <Route path="/experience" element={<Experience />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/createproject" element={<CreateProject/>} />
         <Route path="*" element={<h1>No page Found</h1>} />
       </Routes>
       </div>

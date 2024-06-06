@@ -3,7 +3,7 @@ import './contact.css'
 
 function Contact() {
   return (
-    <div className="contact" >
+    <div className="contact" data-aos="fade-in">
       <div className="contact-text">
         <h2>Contact Me</h2>
         <p>Let's Discuss your next Project</p>

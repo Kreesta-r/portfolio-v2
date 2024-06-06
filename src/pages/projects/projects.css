@@ -19,6 +19,12 @@
   font-weight: 150;
   font-size: 1rem;
 }
+.bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 .item {
   animation: slide-left-to-right 10s ease-in-out infinite;
   cursor: pointer;
