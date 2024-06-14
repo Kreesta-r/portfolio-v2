@@ -16,16 +16,64 @@
   width: 100%;
 }
 .card-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
   position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
   bottom: 0;
-  left: 50%;
   padding: 20px;
   border-radius: 20px;
-  transform: translate(-50%, -50%);
   background-color: rgba(10, 10, 10, 0.6);
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
 }
 .card-text:hover{
   opacity: 1;
+}
+.redirectIcon{
+  font-size: 30px;
+  transition: transform 0.6s ease-in-out;
+}
+.redirectIcon:hover{
+  transform: scale(1.08);
+}
+.res-card-text{
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .card{
+    -webkit-mask: none;
+    mask: none;
+  }
+  .card-image{
+    height: fit-content;
+  }
+  .card-text{
+    display: none;
+  }
+  .res-card-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    background-color: rgb(22, 22, 22);
+    padding:30px;
+  }
+  .viewproject{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: rgb(180, 178, 178);
+  }
+  .redirectIcon{
+    font-size: 15px;
+    color: rgb(180, 178, 178);
+  }
 }

@@ -7,24 +7,32 @@
 .top {
   min-height: 100px;
 }
-.top h2{
+
+.top h2 {
   font-weight: 200;
   font-size: 2rem;
   text-align: center;
   margin: 0;
   text-transform: uppercase;
 }
-.top p{
+
+.top p {
   text-align: center;
   font-weight: 150;
   font-size: 1rem;
 }
-.bottom{
+
+.bottom {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
+
+.resCards {
+  display: none;
+}
+
 .item {
   animation: slide-left-to-right 10s ease-in-out infinite;
   cursor: pointer;
@@ -35,9 +43,19 @@
   to { transform: translateX(0); }
 }
 
-/* New styles for hover/click interaction */
 .projects:hover .item,
 .projects .item:hover,
 .projects .item:active {
   animation-play-state: paused; /* Pause animation on hover/click */
+}
+
+@media screen and (max-width: 992px) {
+  .swiper-container {
+    display: none;
+  }
+  .resCards {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
 }

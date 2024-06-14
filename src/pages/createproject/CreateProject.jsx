@@ -9,6 +9,7 @@ const CreateProject = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [imageUrl, setImageUrl] = useState(""); // New state for image URL
+  const [projectUrl, setProjectUrl] = useState(""); // New state for project URL
   const [isSubmitting, setIsSubmitting] = useState(false); // New state for submission status
   const navigate = useNavigate();
 
@@ -44,11 +45,12 @@ const CreateProject = () => {
     if (isSubmitting) return; // Prevent multiple submissions while uploading
 
     try {
-      // Add project data to Firestore with the imageUrl
+      // Add project data to Firestore with the imageUrl and projectUrl
       await addDoc(postCollectionRef, {
         title,
         description,
         imageUrl,
+        projectUrl, // Add projectUrl to the object
       });
 
       navigate("/"); // Redirect after successful submission
@@ -79,6 +81,13 @@ const CreateProject = () => {
           type="file"
           id="image"
           onChange={handleImageUpload}
+        />
+        <label htmlFor="projectUrl">Project Link:</label>
+        <input  // Add input field for project URL
+          type="url" // Specify type as URL
+          id="projectUrl"
+          value={projectUrl}
+          onChange={(e) => setProjectUrl(e.target.value)}
         />
         <button type="submit" disabled={isSubmitting || !imageUrl}>
           {isSubmitting ? "Image Uploading..." : "Submit"}
