@@ -27,7 +27,7 @@ function About() {
           <div className="socials">
               <a href="https://x.com/ebubechris_k"><i class="fa-brands fa-x-twitter"></i></a>
               <a href="https://www.facebook.com/profile.php?id=100075936112808"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="https://www.linkedin.com/in/ebube-oguejiofor-6b663826a/"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://www.linkedin.com/in/ebubeoguejiofor/"><i class="fa-brands fa-linkedin-in"></i></a>
               <a href="https://github.com/Kreesta-r"><i class="fa-brands fa-github"></i></a>
               <a href="https://wa.me/+2348169421602"><i class="fa-brands fa-whatsapp"></i></a>
               <a href="https://t.me/username/Kreesta"><i class="fa-brands fa-telegram"></i></a>
